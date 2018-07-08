@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<link rel="stylesheet" href="css/flipclock.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script src="js/flipclock.js"></script>
+	<script src="js/sidenav.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Project Title</title>
+</head>
+<body style="display: flex;min-height: 100vh;flex-direction: column;">
+	<nav class="grey darken-3" role="navigation">
+		<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Project Title</a>
+			<ul class="right hide-on-med-and-down">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="https://github.com/James231/Coming-Soon-Webpage" target="_blank">GitHub</a></li>
+			</ul>
+			<ul id="nav-mobile" class="sidenav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="https://github.com/James231/Coming-Soon-Webpage" target="_blank">GitHub</a></li>
+			</ul>
+			<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+		</div>
+	</nav>
+	<div class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<br><br>
+			<h1 class="header center red-text">Project Title</h1>
+			<div class="row center">
+				<h5 class="header col s12 light">A short description about your Project.</h5>
+				<h6>Coming Soon.</h6>
+			</div>
+			<br><br>
+		</div>
+	</div>
+	<main style="flex: 1 0 auto;">
+		<div class="container">
+			<div class="section" style="text-align: center;">
+				<div class="clock"  class="card-panel hoverable" style="display: inline-block; width: auto;"></div>
+				<div class="message"></div>
+				<script type="text/javascript">
+					var clock;
+					$(document).ready(function() {
+						var currentDate = new Date();
+
+        // futureDate should be the release date of your project.
+        // uncomment the line below and change the date to your release date
+        // var futureDate = new Date('October 6, 2018 09:00:00');
+
+        // These lines use a date exactly 10 days into the future. Remove them.
+        var futureDate = new Date();
+        futureDate.setDate(futureDate.getDate() + 10);
+
+        var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+        clock = $('.clock').FlipClock(diff, {
+        	clockFace: 'DailyCounter',
+        	countdown: true
+        });
+    });
+</script>
+</div>
+</div>
+</main>
+<footer class="page-footer grey darken-2">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text">Company Name</h5>
+				<p class="grey-text text-lighten-4">A short description about your company.</p>
+			</div>
+			<div class="col l3 s12">
+				<h5 class="white-text"></h5>
+				<ul>
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="white-text" href="/">Home Page</a></li>
+						<li><a class="white-text" href="mailto:someone@example.com">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container" style="position:relative;">
+				&copy; 2018 Company Name 
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
